@@ -14,7 +14,7 @@
     -->
     <!-- A filter list with patterns. If this pattern merges to a node, topic or service it will not be synchronized.
      (Since version 0.5.4)-->
-    <rosparam param="do_not_sync">[]</rosparam>
+    <rosparam param="do_not_sync">["/*/changes", "/*/linkstats"]</rosparam>
 
     <!-- This list with names of ROS master to ignore -->
     <rosparam param="ignore_hosts">[]</rosparam>
@@ -24,14 +24,14 @@
 
     <!-- The list of nodes, which are to be ignored while a synchroniation. All their topics and services are ignored!
     These are defaults and cannot be removed: [/rosout, "/*master_sync* node", "remote /*master_discovery* node", "/*node_manager", /*zeroconf] -->
-    <rosparam param="ignore_nodes">[]</rosparam>
+    <rosparam param="ignore_nodes">["/master_discovery", "/master_sync"]</rosparam>
 
     <!-- The list of nodes to synchronize. Only topics of this nodes are synchronized. The ~ignore_nodes, ~ignore_topics and ~ignore_services lists are processed first. -->
-    <rosparam param="sync_nodes">[]</rosparam>
+    <rosparam param="sync_nodes">["/publisher_test", "/pathfinding", "/brian"]</rosparam>
 
     <!-- The list of topics, which are to be ignored while a synchroniation. The ~ignore_nodes list is processed first.
     These are defaults and cannot be removed: ['/rosout', '/rosout_agg'] -->
-    <rosparam param="ignore_topics">[]</rosparam>
+    <rosparam param="ignore_topics">["/map", "/odom", "/rosout"]</rosparam>
     <rosparam param="ignore_publishers">[]</rosparam>
     <rosparam param="ignore_subscribers">[]</rosparam>
 
@@ -40,7 +40,7 @@
 
     <!-- The list of services, which are to be ignored while a synchroniation. The ~ignore_nodes list is processed first.
     These are defaults and cannot be removed: ['/*get_loggers', '/*set_logger_level'] -->
-    <rosparam param="ignore_services">[]</rosparam>
+    <rosparam param="ignore_services">["/*get_loggers", "/*set_logger_level"]</rosparam>
 
     <!-- The list of services to synchronize. The ~ignore_nodes and ~ignore_services lists are processed first. -->
     <rosparam param="sync_services">[]</rosparam>
