@@ -27,7 +27,7 @@
     <rosparam param="ignore_nodes">["/master_discovery", "/master_sync"]</rosparam>
 
     <!-- The list of nodes to synchronize. Only topics of this nodes are synchronized. The ~ignore_nodes, ~ignore_topics and ~ignore_services lists are processed first. -->
-    <rosparam param="sync_nodes">["/publisher_test", "/pathfinding", "/brian_soundwave", "/brian_sean_VirtualBox"]</rosparam>
+    <rosparam param="sync_nodes">["/publisher_test", "/pathfinding", "/brian_*"]</rosparam>
 
     <!-- The list of topics, which are to be ignored while a synchroniation. The ~ignore_nodes list is processed first.
     These are defaults and cannot be removed: ['/rosout', '/rosout_agg'] -->
